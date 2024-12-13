@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+.gray-strip {
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+/* Desktop View */
+.desktop-view .top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.desktop-view .logo {
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 44px;
+  text-align: center;
+  flex: 1;
+  position: absolute; 
+  left: 50%; 
+  transform: translateX(-50%);
+
+}
+
+.desktop-view .header-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.desktop-view .nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+.desktop-view .logo-image{
+  width: 36px;
+  height: 36px;
+}
+
+.desktop-view .nav-menu a {
+  font-family: "Simplon Norm", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Mobile View */
+.mobile-view .top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.mobile-view .logo-image{
+  width: 20px;
+  height: 20px;
+}
+.mobile-view .menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.mobile-view .logo {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 24px;
+  text-align: center;
+  flex: 1;
+  position: absolute; 
+  left: 50%; 
+  transform: translateX(-50%);
+}
+
+.mobile-view .header-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-view .nav-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%; left: 0;
+  width: 100%; 
+  background-color: #fff; 
+  border-top: 1px solid #ddd; 
+  z-index: 1000;
+}
+
+.mobile-view .menu-button{
+  background: none;
+  outline: none;
+  border: none;
+  margin: none;
+  padding: none;
+}
+
+.mobile-view .nav-menu.open {
+  display: flex;
+}
+
+.mobile-view .nav-menu a {
+  font-family: "Simplon Norm", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  margin: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .desktop-view {
+      display: none;
+  }
+
+  .mobile-view {
+      display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .desktop-view {
+      display: block;
+  }
+
+  .mobile-view {
+      display: none;
+  }
+}

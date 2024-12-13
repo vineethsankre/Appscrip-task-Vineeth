@@ -1,0 +1,120 @@
+import Header from "../Header";
+import Footer from "../Footer";
+import FiltersGroup from "../FiltersGroup";
+import './index.css';
+import FilterHeader from "../FilterHeader";
+import FilterGroup from "../FilterGroup";
+
+const Home = () => {
+    return (
+        <>
+            <Header />
+            <div className="app-container">
+                <div className="content-container">
+                    <nav className="navigation">
+                        <a href="/" className="nav-link">HOME</a>
+                        <a href="/shop" className="nav-link active">SHOP</a>
+                    </nav>
+                    <div className="company-description-container">
+                        <h1 className="title">DISCOVER OUR PRODUCTS</h1>
+                        <p className="description">
+                            Lorem ipsum dolor sit amet consectetur. Amet est posuere rhoncus
+                            scelerisque. Dolor integer scelerisque nibh amet mi ut elementum
+                            dolor.
+                        </p>
+                    </div>
+                    <FilterHeader />
+                    <FilterGroup />
+                </div>
+            </div>
+            <Footer />
+        </>
+    );
+};
+
+export default Home;
+
+
+
+.app-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0px;
+}
+.content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Simplon Norm', sans-serif; 
+}
+.company-description-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 760px;
+    margin-top: 16px;
+}
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    align-self: flex-start;
+    margin-bottom: 0px;
+}
+
+.nav-link {
+    font-family: 'Simplon Norm', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.4px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin: 0 10px;
+    color: #BFC8CD;
+    text-decoration: none;
+}
+
+.nav-link.active {
+    color: #000;
+}
+
+.title {
+    color: #252020;
+    font-family: 'Simplon Norm', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-align: center;
+    margin: 0px;
+}
+.description {
+    color: #252020;
+    font-family: 'Simplon Norm', sans-serif; 
+    font-size: 16px; 
+    font-weight: 400; 
+    line-height: 22px; 
+    text-align: center; 
+}
+
+@media (min-width: 768px) {
+    .content-container{
+        width: 85%;
+    } 
+    .company-description-container{
+        margin-top: 48px;
+    }
+    .navigation{
+        display: none;
+    }
+    .title { 
+        font-size: 60px; 
+        line-height: 72px; 
+        letter-spacing: 1px; 
+    }
+    .description { font-size: 22px; line-height: 40px; }
+    
+
+}
